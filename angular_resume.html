@@ -1,0 +1,1089 @@
+<!-- Copyright 2016 Deepak Kumar
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+This code is written by Deepak Kumar -->
+
+<!DOCTYPE html  PUBLIC "-//W3C//DTD HTML 4.01//EN"  "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en-US">
+<head profile="http://www.w3.org/2005/10/profile">
+  <link rel="icon" type="image/png"  href="favicon/favicon (4).ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Angular Material style sheet -->
+  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://cdn.rawgit.com/angular/bower-material/v0.10.0/angular-material.css"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- font icons -->
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <style>
+  body{
+    /*background-color: rgb(255,229,204);*/
+    background-image: url("img/icons/media3.jpg");
+  }
+  html, body{
+    overflow: auto;
+  }
+  .cards{
+    background-color: #eee;
+    width: 70%;
+    margin: auto;
+    /*background-color: rgb(204,204,255);*/
+  }
+  .btn-danger{
+    margin: 1%;
+    color: #fff!important;
+  }
+  #name{
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  .heading{
+    font-weight: 400;
+  }
+  .content{
+    letter-spacing: .7px;
+    font-size: 17px;
+  }
+  #college, .school{
+    font-weight: 600;
+  }
+  .school{
+    margin-top: 2%;
+    margin-left: .5%;
+  }
+  .year{
+    float: right;
+  }
+  #grade{
+    font-weight: 600;
+  }
+  .description{
+    font-size: 15px;
+    letter-spacing: .5px;
+  }
+  .project{
+    margin-top: 6%;
+  }
+  #main_project{
+    margin-top: 3%;
+  }
+  .highlight{
+    margin-top: 1%;
+    font-weight: 600;
+    font-size: 16px;
+  }
+  .details{
+    letter-spacing: .7px;
+    font-size: 16px;
+  }
+  .points li{
+    letter-spacing: .5px;
+    margin-top: 1%;
+    font-size: 15.5px;
+    line-height: 25px;
+  }
+  table, td, th {
+    border: 1px solid #ddd;
+    text-align: center;;
+  }
+  table {
+    margin-top: 2%;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  th, td {
+    padding: 15px;
+  }
+  td{
+    font-weight: 450;
+  }
+  md-card{
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.2),0 1px 1px 2px rgba(0,0,0,.14),0 5px 1px -1px rgba(0,0,0,.12);
+  }
+  .links,.snap{
+    margin: 0;
+  }
+  .snap{
+    margin-left: -.2%;
+  }
+  .points p{
+    margin: 0;
+  }
+  .main_link{
+    margin-top: 1%!important;
+  }
+  .contact{
+    font-size: 15.5px;
+    margin-left: .5%;
+  }
+  .clickable{
+    cursor: pointer;
+    color: blue!important;
+    margin-left: 1%;
+    font-size: 16px;
+    text-decoration: none;
+  }
+  .clickable:hover{
+    color:green!important;
+    text-decoration: none;
+  }
+  .clickable:active{
+    text-decoration: none;
+  }
+  .clickable:visited{
+    text-decoration: none;
+  }
+  #first{
+    margin-top: 3%;
+  }
+  .right{
+    float: right;
+    margin-right: 5%;
+  }
+  .left{
+    float: left;
+  }
+  #mail_id{
+    margin-top: 1.5%;
+  }
+  .url_links{
+    float: right;
+  }
+  .side{
+    float: left;
+  }
+  .fa{
+    font-size: 16px!important;
+  }
+  .sub_link{
+    margin-top: 5%!important;
+  }
+  .tech{
+    margin-left: -.3%!important;
+  }
+  .badgeIcon{
+    margin-top: .7%;
+    height: 415px;
+  }
+  .main{
+    margin-left: 38%!important;
+    margin-top: 2.7%;
+  }
+  .submain{
+    margin-left: 38%!important;
+  }
+  #mailId{
+    margin-top: 4%;
+  }
+
+  /* sidebar css start*/
+  @media only screen
+  and (max-width: 736px) {
+    .mobile {
+      display:block;
+    }
+    .cards{
+      width: 100%;
+      margin: auto;
+      /*background-color: rgb(204,204,255);*/
+    }
+    .badgeIcon{
+      width: 50%;
+      height: 300px;
+    }
+    .submain{
+      margin-left: 55%!important;
+    }
+    .mob{
+      margin-left: 0%!important;
+    }
+    .main{
+      margin-left: 55%!important;
+      margin-top: 2.7%;
+    }
+    #mailId{
+      margin-top: 0%!important;
+    }
+	#objective{
+	  font-size: 15.8px!important;
+	}
+    .desktop {
+      display:none;
+    }
+    .tablet {
+      display:none;
+    }
+  }
+
+  @media only screen
+  and (max-width: 736px) and (orientation: portrait) {
+    .mobile {
+      display:block;
+    }
+    .cards{
+      width: 100%;
+      margin: auto;
+      /*background-color: rgb(204,204,255);*/
+    }
+    .badgeIcon{
+      width: 48%;
+      height: 320px;
+    }
+    .submain{
+      margin-left: 45%!important;
+    }
+    .mob{
+      margin-left: 0%!important;
+    }
+    .main{
+      margin-left: 45%!important;
+      margin-top: 2.7%;
+    }
+    #mailId{
+      margin-top: 12%;
+    }
+    .desktop {
+      display:none;
+    }
+    .tablet {
+      display:none;
+    }
+  }
+
+
+  @media only screen
+  and (min-width: 736px)
+  and (max-width: 1200px){
+    .tablet {
+      display:block;
+    }
+    .cards{
+      width: 100%;
+      margin: auto;
+      /*background-color: rgb(204,204,255);*/
+    }
+    .desktop {
+      display:none;
+    }
+    .mobile {
+      display:none;
+    }
+  }
+
+  @media only screen
+  and (min-width: 1200px) {
+    .desktop {
+      display:block;
+    }
+    .tablet {
+      display:none;
+    }
+    .mobile {
+      display:none;
+    }
+  }
+
+  .header md-toolbar md-icon.md-default-theme {
+    color: #FFF; }
+    .md-toolbar-tools{
+      background-color: #E91E63;
+    }
+    #label{
+      background-color: rgb(45,50,62)!important;
+      color: #FFF;
+      position: fixed;
+    }
+    #label:hover{
+      background-color: #039BE5!important;
+    }
+    #profilePic{
+      width: 90%;
+      margin: auto;
+      border-radius: 50%;
+      height: 100%;
+    }
+    #fb_link{
+      width: 20%;
+      height: 50%;
+    }
+
+    #mail{
+      margin-left: 5%;
+    }
+    .md-subheader{
+      background-color: inherit;
+      opacity: 1;
+      color: cadetBlue;
+    }
+    .navbar{
+      position: fixed;
+    }
+    .sidebar{
+      background-color: rgba(0,0,0,0.87)!important;
+      color: rgb(255,255,255);
+    }
+    ._md-subheader-content{
+      font-weight: 500;
+      font-size: 16px;
+      margin-top: 4%;
+    }
+    md-sidenav::-webkit-scrollbar {
+      width: 8px;
+      background-color: #F5F5F5;
+    }
+    md-sidenav::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3) !important;
+      border-radius: 8px;
+    }
+    md-sidenav::-webkit-scrollbar-thumb {
+      background-color: darkgrey;
+      border-radius: 8px;
+      outline: 1px solid slategrey;
+    }
+    md-list md-list-item > md-icon {
+      color: rgb(255,255,255)!important;
+    }
+    .badge{
+      position: absolute;
+      top: 35%;
+      right: 10px;
+      min-width: 20px;
+      height: 20px;
+      line-height: 20px;
+      padding: 0 7px;
+      font-size: 13px;
+      font-weight: 700;
+      border-radius: 20px;
+    }
+    md-list-item:hover {
+      background-color: rgb(0,153,0)!important;
+    }
+    md-content.md-default-theme{
+      overflow-x: hidden;
+    }
+    md-backdrop.md-opaque{
+      background-color: transparent;
+    }
+    .md-button.md-icon-button{
+      padding: 0;
+    }
+    ._md-sidenav-backdrop {
+      height: 100% !important;
+      position: fixed !important;
+    }
+    .md-sidenav-left {
+      position: fixed;
+    }
+    md-divider{
+      border-top-width:4px;
+    }
+
+    /*sidebar css end*/
+
+    /* chips css start*/
+
+    .chipsdemoBasicUsage .errors {
+      font-size: 12px;
+      color: #dd2c00;
+      margin-top: 10px; }
+      .chipsdemoBasicUsage .custom-chips md-chip {
+        position: relative; }
+        .chipsdemoBasicUsage .custom-chips md-chip ._md-chip-remove-container {
+          position: absolute;
+          right: 4px;
+          top: 4px;
+          margin-right: 0;
+          height: 24px; }
+          .chipsdemoBasicUsage .custom-chips md-chip ._md-chip-remove-container button.vegetablechip {
+            position: relative;
+            height: 24px;
+            width: 24px;
+            line-height: 30px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 50%;
+            border: none;
+            box-shadow: none;
+            padding: 0;
+            margin: 0;
+            transition: background 0.15s linear;
+            display: block; }
+            .chipsdemoBasicUsage .custom-chips md-chip ._md-chip-remove-container button.vegetablechip md-icon {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate3d(-50%, -50%, 0) scale(0.7);
+              color: white;
+              fill: white; }
+              .chipsdemoBasicUsage .custom-chips md-chip ._md-chip-remove-container button.vegetablechip:hover, .chipsdemoBasicUsage .custom-chips md-chip ._md-chip-remove-container button.vegetablechip:focus {
+                background: rgba(255, 0, 0, 0.8); }
+                .chipsdemoBasicUsage .custom-chips md-chip:not(.md-readonly) md-chip-template {
+                  padding-right: 5px; }
+                  #read_only{
+                    margin-top: 2.5%;
+                    margin-left: 1.4%;
+                    margin-right: -3%;
+                  }
+                  .md-chips md-chip ._md-chip-content{
+                    font-size: 12px;
+                    font-weight: 600;
+                  }
+                  .skills{
+                    font-weight: 550;
+                    font-size: 17px;
+                    margin-top: 3%;
+                    margin-left: 1%;
+                  }
+                  div._md-label{
+                    margin-left: 1.2%;
+                  }
+                  /* chips css end*/
+
+                  </style>
+                </head>
+                <body ng-app="AngularResume" ng-cloak>
+                  <!--  Your HTML content here   -->
+                  <div ng-controller="SideBarCtrl" class="header" ng-cloak>
+
+                    <md-sidenav class="md-sidenav-left md-whiteframe-z2"
+                    md-component-id="left">
+                    <md-toolbar layout="row">
+                      <div class="md-toolbar-tools " id="label">
+                        <a id= "fb_link" href = "{{person.facebook_link}}" target="_blank"><img ng-src="{{person.imagePath}}" id="profilePic" alt="deepak"></a>
+                        <h4 id ="mail">
+                          <span>{{person.emailId}}</span>
+                        </h4>
+                        <span flex></span>
+                        <md-button class="md-icon-button" aria-label="Close Side Panel" ng-click="closeSideNavPanel()">
+                          <md-tooltip style="font-size: 10px;">Close Side Panel</md-tooltip>
+                          <md-icon class="md-default-theme" class="material-icons">&#xE5CD;</md-icon>
+                        </md-button>
+                      </div>
+                    </md-toolbar>
+                    <md-content layout-padding="" class="sidebar">
+                      <md-list>
+                        <md-subheader class="md-no-sticky">Technical Skills</md-subheader>
+                        <md-list-item ng-repeat = 'skill in skills'>
+                          <p>
+                            {{skill.name}}
+                          </p>
+                          <span class="badge white-fg ng-binding ng-scope" ng-style="{'background': node.badge.color}" style="background: {{skill.color}}!important;">{{skill.rating}}</span>
+                        </md-list-item>
+                        <md-divider></md-divider>
+                        <md-subheader class="md-no-sticky">Familiar Technologies</md-subheader>
+                        <md-list-item ng-repeat = 'technology in technologies'>
+                          <p>
+                            {{technology.name}}
+                          </p>
+                          <span class="badge white-fg ng-binding ng-scope" ng-style="{'background': node.badge.color}" style="background: {{technology.color}}!important;">{{technology.rating}}</span>
+                        </md-list-item>
+                        <md-divider></md-divider>
+                        <md-subheader class="md-no-sticky">Databases</md-subheader>
+                        <md-list-item ng-repeat = 'database in databases'>
+                          <p>
+                            {{database.name}}
+                          </p>
+                          <span class="badge white-fg ng-binding ng-scope" ng-style="{'background': node.badge.color}" style="background: {{database.color}}!important;">{{database.rating}}</span>
+                        </md-list-item>
+                        <md-divider></md-divider>
+                        <md-subheader class="md-no-sticky">Areas Of Interest</md-subheader>
+                        <md-list-item ng-repeat = 'interest in areasOfInterest'>
+                          <p>
+                            {{interest.name}}
+                          </p>
+                          <span class="badge white-fg ng-binding ng-scope" ng-style="{'background': node.badge.color}" style="background: {{interest.color}}!important;">{{interest.rating}}</span>
+                        </md-list-item>
+                      </md-list>
+                    </md-content>
+                  </md-sidenav>
+
+                  <md-toolbar class="desktop">
+                    <div class="md-toolbar-tools navbar">
+                      <md-button class="md-icon-button" aria-label="Side Panel" ng-click="openSideNavPanel()">
+                        <md-tooltip>Side Panel</md-tooltip>
+                        <md-icon class="md-default-theme" class="material-icons">&#xE5D2;</md-icon>
+                      </md-button>
+                      <span flex></span>
+                      <!-- <md-button class="md-icon-button imp_links" aria-label="badge">
+                      <md-tooltip>Badge</md-tooltip>
+                      <a class="plain" id ="badgeLink"><i class="fa fa-certificate"></i></a>
+                    </md-button> -->
+                    <md-button class="md-icon-button imp_links" aria-label="download">
+                      <md-tooltip>Pdf</md-tooltip>
+                      <a class="fa fa-file-pdf-o" href="{{person.pdf_link}}" target="_blank"></a>
+                    </md-button>
+                    <md-button class="md-icon-button imp_links" aria-label="download">
+                      <md-tooltip>Word</md-tooltip>
+                      <a class="fa fa-file-word-o" href="{{person.word_link}}" target="_blank"></a>
+                    </md-button>
+                    <md-button class="md-icon-button imp_links" aria-label="mail">
+                      <md-tooltip>Email</md-tooltip>
+                      <a class="plain" href="mailto:{{person.emailId}}" target="_blank"><i class="fa fa-envelope"></i></a>
+                    </md-button>
+                    <md-button class="md-icon-button imp_links" aria-label="git">
+                      <md-tooltip>GitHub</md-tooltip>
+                      <a class="plain" href="{{person.github_link}}" target="_blank"><i class="fa fa-github"></i></a>
+                    </md-button>
+                    <md-button class="md-icon-button imp_links" aria-label="linkedin">
+                      <md-tooltip>LinkedIn</md-tooltip>
+                      <a class="plain" href="{{person.linkedIn}}" target="_blank"><i class="fa fa-linkedin"></i></a>
+                    </md-button>
+                  </div>
+                </md-toolbar>
+                <md-toolbar class="tablet">
+                  <div class="md-toolbar-tools">
+                    <md-button class="md-icon-button" aria-label="Side Panel" ng-click="openSideNavPanel()">
+                      <md-tooltip>Open Side Panel</md-tooltip>
+                      <md-icon class="md-default-theme" class="material-icons">&#xE5D2;</md-icon>
+                    </md-button>
+                    <span flex></span>
+                    <md-button class="md-icon-button imp_links" aria-label="download">
+                      <md-tooltip>Pdf</md-tooltip>
+                      <a class="fa fa-file-pdf-o" href="{{person.pdf_link}}" target="_blank"></a>
+                    </md-button>
+                    <md-button class="md-icon-button imp_links" aria-label="download">
+                      <md-tooltip>Word</md-tooltip>
+                      <a class="fa fa-file-word-o" href="{{person.word_link}}" target="_blank"></a>
+                    </md-button>
+                    <!-- <md-button class="md-icon-button imp_links" aria-label="badge">
+                    <md-tooltip>Badge</md-tooltip>
+                    <a class="plain" href="#myModal" data-toggle="modal"><i class="fa fa-certificate"></i></a>
+                  </md-button> -->
+                  <md-button class="md-icon-button imp_links" aria-label="mail">
+                    <md-tooltip>Email</md-tooltip>
+                    <a class="plain" href="mailto:{{person.emailId}}" target="_blank"><i class="fa fa-envelope"></i></a>
+                  </md-button>
+                  <md-button class="md-icon-button imp_links" aria-label="git">
+                    <md-tooltip>GitHub</md-tooltip>
+                    <a class="plain" href="{{person.github_link}}" target="_blank"><i class="fa fa-github"></i></a>
+                  </md-button>
+                  <md-button class="md-icon-button imp_links" aria-label="linkedin">
+                    <md-tooltip>LinkedIn</md-tooltip>
+                    <a class="plain" href="{{person.linkedIn}}" target="_blank"><i class="fa fa-linkedin"></i></a>
+                  </md-button>
+                </div>
+              </md-toolbar>
+              <md-toolbar class="mobile">
+                <div class="md-toolbar-tools" data-ng-show="showMobileMainHeader">
+                  <md-button class="md-icon-button" aria-label="Side Panel" ng-click="openSideNavPanel()">
+                    <md-tooltip>Open Side Panel</md-tooltip>
+                    <md-icon class="md-default-theme" class="material-icons">&#xE5D2;</md-icon>
+                  </md-button>
+                  <!-- <md-button class="md-icon-button imp_links" aria-label="badge">
+                  <md-tooltip>Badge</md-tooltip>
+                  <a class="plain" href="#myModal" data-toggle="modal"><i class="fa fa-certificate"></i></a>
+                </md-button> -->
+                <md-button class="md-icon-button imp_links" aria-label="download">
+                  <md-tooltip>Pdf</md-tooltip>
+                  <a class="fa fa-file-pdf-o" href="{{person.pdf_link}}" target="_blank"></a>
+                </md-button>
+                <md-button class="md-icon-button imp_links" aria-label="download">
+                  <md-tooltip>Word</md-tooltip>
+                  <a class="fa fa-file-word-o" href="{{person.word_link}}" target="_blank"></a>
+                </md-button>
+                <md-button class="md-icon-button imp_links" aria-label="mail">
+                  <md-tooltip>Email</md-tooltip>
+                  <a class="plain" href="mailto:{{person.emailId}}" target="_blank"><i class="fa fa-envelope"></i></a>
+                </md-button>
+                <md-button class="md-icon-button imp_links" aria-label="git">
+                  <md-tooltip>GitHub</md-tooltip>
+                  <a class="plain" href="{{person.github_link}}" target="_blank"><i class="fa fa-github"></i></a>
+                </md-button>
+                <md-button class="md-icon-button imp_links" aria-label="linkedin">
+                  <md-tooltip>LinkedIn</md-tooltip>
+                  <a class="plain" href="{{person.linkedIn}}" target="_blank"><i class="fa fa-linkedin"></i></a>
+                </md-button>
+
+              </div>
+              <!-- <div class="md-toolbar-tools" data-ng-hide="showMobileMainHeader">
+              <md-button class="md-icon-button" aria-label="Back" data-ng-click="showMobileMainHeader = true">
+              <md-tooltip>Back</md-tooltip>
+              <md-icon class="material-icons">&#xE5C4;</md-icon>
+            </md-button>
+            <span flex></span>
+            <md-button class="md-icon-button" aria-label="Search">
+            <md-tooltip>Search</md-tooltip>
+            <md-icon class="material-icons">&#xE163;</md-icon>
+          </md-button>
+
+        </div> -->
+      </md-toolbar>
+    </div>
+
+    <div class = "mainDiv" ng-controller="AppCtrl" ng-cloak>
+      <md-content class="md-padding cards" layout-xs="column" layout="row">
+        <div flex-xs flex-gt-xs="100" layout="column">
+          <md-card class="card_1">
+            <!-- <md-card-title>
+            <md-card-title-text>
+            <span class="md-headline" id = "name">{{person.name}}</span>
+          </md-card-title-text>
+        </md-card-title> -->
+        <md-card-content>
+          <div style='float:left' class="LI-profile-badge badgeIcon" data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="deepak-kumar-9735396b"><a class="LI-simple-link" href='https://in.linkedin.com/in/deepak-kumar-9735396b?trk=profile-badge' target='_blank'>Deepak Kumar</a></div>
+          <h4 class ="heading main">OBJECTIVE :</h4>
+          <p class = "content submain submob" id = "objective" style="margin-top: 1.5%">
+            {{person.objective}}
+          </p>
+          <p class = "content submain mob" id ="mailId">
+            <span class ="highlight">Email</span>: <a class="clickable" href="mailto:{{person.mail}}" target="_blank">{{person.mail}}</a>
+          </p>
+          <p class = "content submain mob">
+            <span class ="highlight">Phone</span>: {{contactInfo.phone}}
+          </p>
+          <p class = "content submain mob">
+            <span class ="highlight">GitHub</span>: <a class="clickable" href="{{contactInfo.github_link}}" target="_blank">{{contactInfo.github_link}}</a>
+          </p>
+        </md-card-content>
+      </md-card>
+      <md-card class="card_1">
+        <md-card-content>
+          <!-- <div class="LI-profile-badge badgeIcon" data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="deepak-kumar-9735396b"><a class="LI-simple-link" href='https://in.linkedin.com/in/deepak-kumar-9735396b?trk=profile-badge'>Deepak Kumar</a></div> -->
+          <h4 class ="heading">EXPERIENCE :</h4>
+          <p class = "content" id ="college">
+            {{company.name}}
+            <span class = "year">{{company.duration}}</span>
+          </p>
+          <p class = "content">
+            {{company.designation}} ({{company.experience}})
+          </p>
+          <ul type="disc" class = "points">
+            <li>Worked as <span class ="highlight">Full MEAN Stack Programmer</span> and <span class ="highlight">J2EE Developer</span> at wipro and developed open source business and personal products, Restful web services using Node.js, Angular JS, jQuery, Spring MVC and Java API’s for automation. </li>
+            <li>Research work and end to end application development for <span class ="highlight">Wipro Digital</span> and <span class ="highlight">Wipro Holmes (CTO Office).</span></li>
+          </ul>
+
+        </md-card-content>
+      </md-card>
+      <md-card class="card_2">
+        <md-card-content>
+          <h4 class ="heading">EDUCATION :</h4>
+          <p class = "content" id ="college">
+            {{college.name}}
+            <span class = "year">{{college.duration}}</span>
+          </p>
+          <ul type="disc" class = "description">
+            <li>{{college.degree}} in <span class ="highlight">{{college.branch}}</span> (Cumulative CGPA: <span id = "grade"> {{college.grade}} </span> on absolute scale)</li>
+          </ul>
+          <table style="width:100%">
+            <tr>
+              <th style="font-size: 14.5px;">Semester</th>
+              <th ng-repeat = 'semester in semesters' id ="sem">
+                {{semester}}
+              </th>
+            </tr>
+            <tr>
+              <td style="font-weight: 600;">SGPA</td>
+              <td ng-repeat = 'semester_grade in semester_grades'>
+                {{semester_grade}}
+              </td>
+            </tr>
+            <tr>
+              <td style ="font-weight: 600;">YGPA</td>
+              <td colspan="2" ng-repeat = 'year_grade in year_grades' id = "yearGrades">
+                {{year_grade}}
+              </td>
+            </tr>
+          </table>
+          <p class = "content school">
+            {{seniorSchool.name}}
+            <span class = "year">{{seniorSchool.year}}</span>
+          </p>
+          <ul type="disc" class = "description">
+            <li>All India Senior Secondary School Certificate Examination (Percentage: <span id = "grade"> {{seniorSchool.marks}} </span>)</li>
+          </ul>
+          <p class = "content school">
+            {{school.name}}
+            <span class = "year">{{school.year}}</span>
+          </p>
+          <ul type="disc" class = "description">
+            <li>All India Secondary School Examination (Percentage: <span id = "grade"> {{school.marks}} </span>)</li>
+          </ul>
+        </md-card-content>
+      </md-card>
+      <md-card class="card_3">
+        <md-card-content>
+          <h4 class ="heading">SKILLS AND INTERESTS :</h4>
+          <div ng-controller="AppCtrl as ctrl" layout="column" ng-cloak>
+            <p class = "skills">Technical Skills :</p>
+            <md-chips ng-model="ctrl.skills" readonly="ctrl.readonly"></md-chips>
+            <p class = "skills">Familiar Technologies :</p>
+            <md-chips ng-model="ctrl.familiarTechnologies" readonly="ctrl.readonly"></md-chips>
+            <p class = "skills">Databases :</p>
+            <md-chips ng-model="ctrl.databases" readonly="ctrl.readonly"></md-chips>
+            <p class = "skills">Areas Of Interest :</p>
+            <md-chips ng-model="ctrl.areasOfInterest" readonly="ctrl.readonly"></md-chips>
+            <md-checkbox ng-model="ctrl.readonly" id="read_only">Readonly</md-checkbox>
+          </div>
+        </md-card-content>
+      </md-card>
+      <md-card class="card_4">
+        <md-card-content>
+          <h4 class ="heading">SOFTWARE EXPERIENCE :</h4>
+          <p class = "content">
+            <h4 class="project" id ="main_project">Project 1: <span class = "year">10/2015 - 02/2016</span></h4>
+            <p class ="details">Developed an <span class ="highlight">Open Source</span> product named <span class ="highlight">Tattva</span> which aggregates the logs from different sources and has predefined watchlists and visualisations based on which automated actions can be triggered.
+              It helps in<span class ="highlight"> Operational Intelligence.</span> <span class ="highlight"> [Team Size: 6]</span></p>
+            </p>
+            <ul type="disc" class = "points">
+              <li>This application does <span class ="highlight">Real Time</span> log data analysis and helps in <span class="highlight">complex event processing.</span>
+                It turns machine data into <span class="highlight">valuable insights.</span></li>
+                <li>It continuously ingests &#38; analyses the <span class ="highlight">live data</span> from multiple sources, to derive operational intelligence to identify potential opportunities, risks and any other meaningful event.
+                </li>
+                <li><span class ="highlight tech">Technologies used:</span> Node.js, Angular JS, Express.js, MongoDB, D3.js, Passport.js, jQuery, HTML, HTML5, CSS, CSS3, Bootstrap, JavaScript</li>
+                <li><span class ="highlight tech">Tools used:</span> Atom, Vagrant, VirtualBox, Git Bash, Fluent, Mergetool, Sublime Text, Trello, Ubuntu, NPM</li>
+                <p class ="main_link"> <span class ="highlight links">Link:</span> <a class="clickable" href="http://tattva.stackroute.in/" target="_blank">http://tattva.stackroute.in/</a></p>
+                <p><span class ="highlight snap sub_link">Github:</span><a class="clickable" href="https://github.com/stackroute/LogAggregator" target="_blank">https://github.com/stackroute/LogAggregator</a></p>
+                <p><span class ="highlight snap sub_link">Snapshots:</span><a class="clickable" href="https://drive.google.com/open?id=0ByQq7Rdpd4sHdGp6X3dvOEtCVHc" target="_blank">https://drive.google.com/open?id=0ByQq7Rdpd4sHdGp6X3dvOEtCVHc</a></p>
+              </ul>
+
+              <p class = "content">
+                <h4 class="project">Project 2: <span class = "year">02/2016 - 05/2016</span></h4>
+                <p class ="details">Contributed to another <span class ="highlight">Open Source </span> product named <span class ="highlight">Visual BI</span> which is used to query and analyze multidimensional data sources called<span class ="highlight"> OLAP Cubes </span>from Xmla Servers.<span class ="highlight"> [Team Size: 6]</span></p>
+              </p>
+              <ul type="disc" class = "points">
+                <li>An OLAP cube is a method of storing data in a <span class ="highlight">multidimensional</span> form, generally for reporting purposes and for <span class ="highlight">online analytical processing.</span></li>
+                <li>In OLAP cubes, data (measures) are categorized by dimensions. It is mainly used for <span class ="highlight">Business Intelligence.</span></li>
+                <li><span class ="highlight tech">Technologies used:</span> Node.js, Angular JS, Express.js, MongoDB, D3.js, Passport.js, jQuery, HTML, HTML5, CSS, CSS3, Bootstrap, JavaScript</li>
+                <li><span class ="highlight tech">Tools used:</span> Atom, Vagrant, VirtualBox, Git Bash, Fluent, Mergetool, Sublime Text, Trello, Ubuntu, NPM</li>
+                <p class ="main_link"> <span class ="highlight links">Link:</span> <a class="clickable" href="http://slate.stackroute.in/" target="_blank">http://slate.stackroute.in/</a></p>
+                <p><span class ="highlight snap sub_link">Github:</span><a class="clickable" href="https://github.com/deepak1745/VisualBI" target="_blank">https://github.com/deepak1745/VisualBI</a></p>
+                <p><span class ="highlight snap sub_link">Snapshots:</span><a class="clickable" href="https://drive.google.com/open?id=0ByQq7Rdpd4sHTERaZ3hYcUhwWVk" target="_blank">https://drive.google.com/open?id=0ByQq7Rdpd4sHTERaZ3hYcUhwWVk</a></p>
+              </ul>
+
+         <!--      <p class = "content">
+                <h4 class="project">Project 3: <span class = "year">06/2016 - 07/2016</span></h4>
+                <p class ="details">Redesigned the <span class ="highlight">Front End</span> of a travel site as a part of client project using <span class ="highlight">Angular Material Designs.</span></p>
+              </p>
+              <ul type="disc" class = "points">
+                <li>It is a conventional travel site with enhanced interface, functionality and enriched experience due to <span class ="highlight">two way data binding model</span> of Angular MVC Framework. </li>
+                <li><span class ="highlight tech">Technologies used:</span> Node.js, Angular js, Angular Material, HTML, HTML5, CSS, CSS3, Bootstrap, Javascript</li>
+                <li><span class ="highlight tech">Tools used:</span> Atom, Git Bash, NPM</li>
+                <p class ="main_link"> <span class ="highlight links">Samples:</span><a class="clickable" href="https://drive.google.com/open?id=0ByQq7Rdpd4sHUW9Tbldzc0NIUHc" target="_blank">https://drive.google.com/open?id=0ByQq7Rdpd4sHUW9Tbldzc0NIUHc</a></p>
+              </ul> -->
+
+              <p class = "content">
+                <h4 class="project">Project 3: <span class = "year">07/2016 - 10/2016</span></h4>
+                <p class ="details">Developed a tool for <span class ="highlight">Wipro Holmes Project</span> which takes PDF, WORD, RTF or WPD documents as input and generates structured XML as output.<span class ="highlight"> [Team Size: 6]</span></p>
+              </p>
+              <ul type="disc" class = "points">
+                <li>The tool extracts <span class ="highlight">entities</span> like front matter, paragraph, subparagraph, headers, footnotes etc. from unstructured data (pdf, word) and then put them in their respective tags in <span class ="highlight">xml</span> format.</li>
+				<li>This <span class ="highlight">automation</span> of structuring of data will help client in generating <span class ="highlight">quick news reports</span>, making large sets of legal jurisdiction informations available on web for future reference and also in minimizing their manual conversion effort, errors, cost and time.</li>
+                <li>Enhanced Apache pdf2html API <span class ="highlight">source code</span> to read bold, italic and underline informations as well as to <span class ="highlight">annotate</span> entities in document itself.</li>
+                <li><span class ="highlight tech">Technologies used:</span> Java, Natural Language Processing, Apache Selenium </li>
+                <li><span class ="highlight tech">Tools used:</span> Eclipse, Apache Pdfbox, Apache Pdf2Html, Apache OpenNlp, Apache Tomcat, jsoup, Spring Boot</li>
+              </ul>
+
+              <p class = "content">
+                <h4 class="project">Project 4: <span class = "year">11/2016 - 05/2017</span></h4>
+                <p class ="details">Developed complete UI of a cognitive AI tool for a US title insurance company as part of client project.<span class ="highlight"> [Team Size: 10]</span></p>
+              </p>
+              <ul type="disc" class = "points">
+                <li>The UI has feature of both folder and file uploading and pages showing extracted entities along with annotated documents plus save and update option for finding final vesting. It has a beautiful <span class ="highlight">timeline</span> feature along with various <span class ="highlight">d3 graphs and table visualizations.</span></li>
+                <li>Was also involved in xml parsing, pdf splitting and creating java rest api services.</li>
+
+                <li><span class ="highlight tech">Technologies used:</span> Java, Angular JS, HTML, CSS, Spring MVC </li>
+                <li><span class ="highlight tech">Tools used:</span> Eclipse, Apache Tomcat, Atom</li>
+              </ul>
+
+              <p class = "content">
+                <h4 class="project">Project 5: <span class = "year">06/2017 - current</span></h4>
+                <p class ="details">Currently working on different Bothub and Chatbots of <span class ="highlight">Wipro HOLMES</span> using meteor.js. [Team Size: 8]</span></p>
+              </p>
+              <ul type="disc" class = "points">
+                <li> Developing complete UI of these bots.</li>
+
+                <li><span class ="highlight tech">Technologies used:</span> meteor.js, node.js </li>
+                <li><span class ="highlight tech">Tools used:</span> Mobaxterm, Atom</li>
+              </ul>
+
+              <p class = "content">
+                <h4 class="project">Project 6: <span class = "year">05/2016 - 07/2016</span></h4>
+                <p class ="details">Developed a <span class="highlight">Chat Application </span>to share text messages, photos, smileys and chat in groups.<span class ="highlight"> [Team Size: 2]</span></p>
+              </p>
+              <ul type="disc" class = "points">
+                <li>This is a <span class="highlight">real time </span>chat application similar to skype and WhatsApp build with <span class="highlight">Node.js</span> and <span class="highlight">Socket io </span> with cool interface and UI design.
+                </li>
+                <li>Can be used for chatting with friends both offline(local server) and online(public link) in case you don't want to share your fb or WhatsApp contact details but still want to chat. Being <span class="highlight">open sourced</span> anyone can add features or design it in their own way. It is currently being used by team members of my company to share relevant references links, error informations and issues/queries among themselves.
+                </li>
+                <li><span class ="highlight tech">Technologies used:</span> Node.js, Socket.io, Angular JS, Express.js, jQuery, HTML, HTML5, CSS, CSS3, Bootstrap, JavaScript</li>
+                <li><span class ="highlight tech">Tools used:</span> Atom, Git Bash, NPM</li>
+                <p class ="main_link"> <span class ="highlight links">Link:</span> <a class="clickable" href="http://chat-95455.app.xervo.io/" target="_blank">http://chat-95455.app.xervo.io/</a></p>
+                <p><span class ="highlight snap sub_link">Github:</span><a class="clickable" href="https://github.com/deepak1745/ChatUp" target="_blank">https://github.com/deepak1745/ChatUp</a></p>
+                <p><span class ="highlight snap sub_link">Snapshots:</span><a class="clickable" href="https://drive.google.com/open?id=0ByQq7Rdpd4sHU1BLR1NicEZfenM" target="_blank">https://drive.google.com/open?id=0ByQq7Rdpd4sHU1BLR1NicEZfenM</a></p>
+              </ul>
+
+              <p class = "content">
+                <h4 class="project">Project 7: <span class = "year">05/2016 - 06/2016</span></h4>
+                <p class ="details">Developed a web based <span class="highlight">Media Player </span> which plays local audio and video files in browser with <span class="highlight">full controls.</span></p>
+              </p>
+              <ul type="disc" class = "points">
+                <li> This application prevents <span class="highlight">distraction </span> caused due to shift of window tabs in order to play next file or change volume levels while working in browser and has <span class="highlight">shuffle</span> and <span class="highlight">repeat</span> features also.
+                </li>
+                <li>Being a <span class="highlight">thread</span> it's light weighted also and shares resources of browser, can be pinned to browser, multiple instances can be opened simultaneously and does not require much <span class="highlight">RAM</span>.
+                </li>
+                <li>Also being <span class="highlight">open sourced </span>you can add your own features and style it to your personal liking.</li>
+                <li><span class ="highlight tech">Technologies used:</span> HTML, HTML5, CSS, CSS3, Bootstrap, JavaScript, jQuery</li>
+                <li><span class ="highlight tech">Tools used:</span> Atom, Git Bash, NPM</li>
+                <p class ="main_link"><span class ="highlight snap sub_link">Github:</span><a class="clickable" href="https://github.com/deepak1745/media-player" target="_blank">https://github.com/deepak1745/media-player</a></p>
+                <p><span class ="highlight snap sub_link">Snapshots:</span><a class="clickable" href="https://drive.google.com/open?id=0ByQq7Rdpd4sHOVh4RTdQQldoUFk" target="_blank">https://drive.google.com/open?id=0ByQq7Rdpd4sHOVh4RTdQQldoUFk</a></p>
+              </ul>
+
+              <p class = "content">
+                <h4 class="project">Project 8: <span class = "year">08/2015 - 10/2015</span></h4>
+                <p class ="details">Developed an <span class="highlight">Online Cab Booking System</span> using <span class="highlight">Spring MVC Framework</span> [Team Size: 3]</span></p>
+              </p>
+              <ul type="disc" class = "points">
+                <li> This <span class="highlight">web application</span> can be used to book cabs between an entered source and destination along with vehicle of our choice.
+                </li>
+                <li>It has all the basic features that are required by an user to have a convenient and hassle free <span class="highlight">online booking experience.</span>
+                </li>
+                <li><span class ="highlight tech">Technologies used:</span> Java, Spring MVC, Hibernate, Jdbc, Servlets, JSP, JUnit, HTML, HTML5, CSS, CSS3, JavaScript, SQL</li>
+                <li><span class ="highlight tech">Tools used:</span> Eclipse, SVN, Apache Tomcat</li>
+                <p class ="main_link"><span class ="highlight snap sub_link">Github:</span><a class="clickable" href="https://github.com/deepak1745/Online-Cab-Booking-System" target="_blank">https://github.com/deepak1745/Online-Cab-Booking-System</a></p>
+                <p><span class ="highlight snap sub_link">Snapshots:</span><a class="clickable" href="https://drive.google.com/open?id=0ByQq7Rdpd4sHdFE3cXZRdV8yWUk" target="_blank">https://drive.google.com/open?id=0ByQq7Rdpd4sHdFE3cXZRdV8yWUk</a></p>
+              </ul>
+
+              <p class = "content">
+                <h4 class="project">Project 9: <span class = "year">11/2015 - 11/2015</span></h4>
+                <p class ="details">Designed <span class="highlight">Responsive</span> sites with beautiful UI design and features using bootstrap.</p>
+              </p>
+              <ul type="disc" class = "points">
+                <li> <span class="highlight">Digital site:</span>
+                  <a class="clickable" href="http://digital-95735.app.xervo.io" target="_blank">Services</a>
+                  <a class="clickable" href="http://digital-95735.app.xervo.io/portfolio" target="_blank">Portfolio</a></li>
+                  <p class ="main_link"><span class ="highlight snap sub_link">Github:</span><a class="clickable" href="https://github.com/deepak1745/Digital_site" target="_blank">https://github.com/deepak1745/Digital_site</a></p>
+                  <p><span class ="highlight snap sub_link">Snapshots:</span><a class="clickable" href="https://drive.google.com/open?id=0ByQq7Rdpd4sHMEpjSjcxOHlkX28" target="_blank">https://drive.google.com/open?id=0ByQq7Rdpd4sHMEpjSjcxOHlkX28</a></p>
+                  <li> <span class="highlight">Browser site:</span>
+                    <a class="clickable" href="http://browser-95736.app.xervo.io" target="_blank">Services</a>
+                    <a class="clickable" href="http://browser-95736.app.xervo.io/portfolio" target="_blank">Portfolio</a></li>
+                    <p class ="main_link"><span class ="highlight snap sub_link">Snapshots:</span><a class="clickable" href="https://drive.google.com/open?id=0ByQq7Rdpd4sHbUU3R3BVdGpHa3M" target="_blank">https://drive.google.com/open?id=0ByQq7Rdpd4sHbUU3R3BVdGpHa3M</a></p>
+                    <li><span class ="highlight tech">Technologies used:</span> HTML, HTML5, CSS, CSS3, JavaScript, Bootstrap</li>
+                    <li><span class ="highlight tech">Tools used:</span> Atom, Git Bash </li>
+                  </ul>
+
+             <!--      <p class = "content">
+                    <h4 class="project">Project 10: <span class = "year">05/2015 - 06/2015</span></h4>
+                    <p class ="details"><span class ="highlight">SUDOKU SOLVER</span></p>
+                  </p>
+                  <ul type="disc" class = "points">
+                    <li>The program written in <span class ="highlight">C++</span> solves Sudoku problems in <span class ="highlight">milli seconds</span>. It makes use of <span class ="highlight">Recursive
+                      Backtrack</span> and guess is made at the cell with <span class ="highlight">min no. of possibilities</span> which reduces time.
+                      My implementation requires <span class ="highlight">5-6 guesses</span> for <span class ="highlight">hard Sudoku </span>problem and it also checks
+                      for multiple or no solutions possibility.</li>
+                      <p class ="main_link"> <span class ="highlight links">Link:</span> <a class="clickable" href="https://drive.google.com/open?id=0ByQq7Rdpd4sHVnhCUEFrM0dHOUU" target="_blank">https://drive.google.com/open?id=0ByQq7Rdpd4sHVnhCUEFrM0dHOUU</a></p>
+                      <p><span class ="highlight snap">Github:</span><a class="clickable" href="https://github.com/deepak1745/Sudoku-Solver" target="_blank">https://github.com/deepak1745/Sudoku-Solver</a></p>
+                    </ul>
+
+                    <p class = "content">
+                      <h4 class="project">Project 11: <span class = "year">03/2015 - 04/2015</span></h4>
+                      <p class ="details"><span class ="highlight">PYTHON BASED GAMES</span></p>
+                    </p>
+                    <ul type="disc" class = "points">
+                      <li>Developed traditional <span class ="highlight">ping pong</span> game in <span class ="highlight">python.</span></li>
+                      <p class ="main_link"> <span class ="highlight links">Link:</span> <a class="clickable" href="http://www.codeskulptor.org/#user23_iH1kcrInu1nvLkU.py" target="_blank">http://www.codeskulptor.org/#user23_iH1kcrInu1nvLkU.py</a></p>
+                      <p><span class ="highlight snap">Snapshots:</span><a class="clickable" href="https://drive.google.com/open?id=0ByQq7Rdpd4sHc1hWdTUwdlc2eWc" target="_blank">https://drive.google.com/open?id=0ByQq7Rdpd4sHc1hWdTUwdlc2eWc</a></p>
+                      <li>Developed game resembling <span class ="highlight">Star Wars</span> where we have a spaceship and meteoroids and other obstacles which we are supposed to destroy using missiles in order to gain points and survive.The <span class ="highlight">sound effect and space graphics</span> makes star fight look real.</li>
+                      <p class ="main_link"> <span class ="highlight links">Link:</span> <a class="clickable" href="http://www.codeskulptor.org/#user27_UCcepMOKOBEofG5.py" target="_blank">http://www.codeskulptor.org/#user27_UCcepMOKOBEofG5.py</a></p>
+                      <p><span class ="highlight snap">Snapshots:</span><a class="clickable" href="https://drive.google.com/open?id=0ByQq7Rdpd4sHNTh5S2JfODhWYU0" target="_blank">https://drive.google.com/open?id=0ByQq7Rdpd4sHNTh5S2JfODhWYU0</a></p>
+                    </ul> -->
+
+                    <!-- <p class = "content">
+                      <h4 class="project">Project 12: <span class = "year">10/2014 - 02/2015</span></h4>
+                      <p class ="details"><span class ="highlight">A Super Market Transaction System </span>involved implementation of <span class ="highlight">Apriori Algorithm. (B.TECH PROJECT)</span></p>
+                    </p>
+                    <ul type="disc" class = "points">
+                      <li>It studies data patterns <span class ="highlight">DATA MINING</span> to develop marketing strategies by carefully analyzing
+                        buying trends of customers.</li>
+                        <li>Data for multiple transactions are taken, on which apriori algorithm is used to evaluate the
+                          trend.</li>
+                          <li><span class ="highlight tech">Technologies used:</span> Java.</li>
+                        </ul> -->
+
+                    <!--     <p class = "content">
+                          <h4 class="project">Project 12: <span class = "year">08/2013 - 09/2013</span></h4>
+                          <p class ="details"><span class ="highlight">APPLET EXPERIENCE</span></p>
+                        </p>
+                        <ul type="disc" class = "points">
+                          <li>Made a colorful Applet for the<span class ="highlight"> Periodic Table</span> using <span class ="highlight"> Abstract Window Toolkit (AWT)</span> with
+                            source code in <span class ="highlight">Java</span> where clicking on any element displayed their corresponding
+                            properties. It’s advantage is that it is not so clumsy as compared to normal periodic
+                            tables.</li>
+
+                            <p class="main_link"><span class ="highlight snap">Snapshots:</span><a class="clickable" href="https://drive.google.com/open?id=0ByQq7Rdpd4sHZW03Tk9zRHVaM0k" target="_blank">https://drive.google.com/open?id=0ByQq7Rdpd4sHZW03Tk9zRHVaM0k</a></p>
+                            <li>Created an application for conducting <span class ="highlight">Online Exams </span>using <span class ="highlight">Swing</span> and AWT . It resembles with conventional online exam pattern having MCQ's questions with bookmark feature.</li>
+                            <p class = "main_link"><span class ="highlight snap">Snapshots:</span><a class="clickable" href="https://drive.google.com/open?id=0ByQq7Rdpd4sHZlRjMGFuanlYUG8" target="_blank">https://drive.google.com/open?id=0ByQq7Rdpd4sHZlRjMGFuanlYUG8</a></p>
+                          </ul> -->
+                        </md-card-content>
+                      </md-card>
+                      <md-card class="card_5">
+                        <md-card-content>
+                          <h4 class ="heading">ACHIEVEMENTS / EXTRA CURRICULAR ACTIVITIES:</h4>
+                          <ul type="disc" class = "points">
+                            <li id="first">Did <span class ="highlight">Immersive Full MEAN Stack </span> training in Stackroute (NIIT CENTRE), Bangalore as part of <span class ="highlight">Wipro Digital Academy Training Program.</span></li>
+                            <li>Participation in <span class ="highlight">ALL INDIA PAPER PRESENTATION CONTEST</span> in first year (2011).</li>
+                            <li>Received <span class ="highlight">scholarship</span> for class 11th and 12th from school.</li>
+                            <li>Received a <span class ="highlight">cash award</span> of Rs <span class ="highlight">20,000</span> from Bihar state govt for securing 95% marks in class 10.</li>
+                            <li>Received <span class ="highlight">‘Pratibha Samman’</span> award from SBI, Rajbansi Nagar, Patna in 2011.</li>
+                            <li>Won a <span class ="highlight">Gold Medal</span> in 100 m sack race in 2004.</li>
+                          </ul>
+                        </md-card-content>
+                      </md-card>
+                      <md-card class="card_5">
+                        <md-card-content>
+                          <h4 class ="heading">PERSONAL INFORMATION:</h4>
+                          <ul type="disc" class = "points left">
+                            <li><span class ="highlight">Father:</span> {{personalInfo.father}}</li>
+                            <li><span class ="highlight">Nationality:</span> {{personalInfo.nationality}}</li>
+                            <li><span class ="highlight">Languages:</span> {{personalInfo.languages}}</li>
+                          </ul>
+                          <ul type="disc" class = "points right">
+                            <li><span class ="highlight">Mother:</span> {{personalInfo.mother}}</li>
+                            <li><span class ="highlight">Date Of Birth:</span> {{personalInfo.date_of_birth}}</li>
+                            <li><span class ="highlight">Hobbies:</span> {{personalInfo.hobbies}}</li>
+                          </ul>
+                        </md-card-content>
+                      </md-card>
+                      <md-card class="card_5">
+                        <md-card-content>
+                          <h4 class ="heading">CONTACT INFORMATION:</h4>
+                          <p class="contact" id= "mail_id">
+                            <span class ="highlight">Email:</span>
+                            <span ng-repeat = 'email in contactInfo.emailInfo'>
+                              <a class="clickable" href="mailto:{{email}}" target="_blank">{{email}}</a>
+                            </span>
+                          </p>
+                          <p class="contact">
+                            <span class ="highlight">Phone:</span> {{contactInfo.phone}}
+                          </p>
+                          <p class="contact">
+                            <span class ="highlight">GitHub:</span> <a class="clickable" href="{{contactInfo.github_link}}" target="_blank">{{contactInfo.github_link}}</a>
+                          </p>
+                          <p class="contact">
+                            <span class ="highlight">LinkedIn:</span> <a class="clickable" href="{{contactInfo.linkedIn}}" target="_blank">{{contactInfo.linkedIn}}</a>
+                          </p>
+                          <!-- <p class="contact">
+                            <span class ="highlight">Skype:</span> <a class="clickable" href="skype:{{contactInfo.skype}}" target="_blank">{{contactInfo.skype}}</a>
+                          </p> -->
+                        </md-card-content>
+                      </md-card>
+                      <md-card class="card_6">
+                        <md-card-content>
+                          <p class="contact">
+                            <span class ="highlight">Copyrights © 2016 Deepak Kumar</span></a>
+                          </p>
+                        </md-card-content>
+                      </md-card>
+                    </div>
+                  </md-content>
+
+                </div>
+
+
+                <!-- <div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="horizontal" data-theme="dark" data-vanity="deepak-kumar-9735396b"><a class="LI-simple-link" href='https://in.linkedin.com/in/deepak-kumar-9735396b?trk=profile-badge'>Deepak Kumar</a></div> -->
+
+
+                <!-- Angular Material requires Angular.js Libraries -->
+                <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.js"></script>
+                <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+                <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
+                <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-route.min.js"></script>
+                <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
+                <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
+
+                <!-- Angular Material Library -->
+                <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
+
+                <!-- jquery Library -->
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+                <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+
+                <!-- Your application bootstrap  -->
+                <script type="text/javascript">
+                // $('.LI-field').remove();
+
+                (function () {
+                  'use strict';
+                  var app = angular.module('AngularResume', ['ngMaterial', 'ngMessages']);
+                  app.config(['$mdIconProvider', function($mdIconProvider) {
+                    $mdIconProvider.icon('md-close', 'img/icons/ic_close_24px.svg', 24);
+                  }])
+                  app.controller('AppCtrl', AppCtrl);
+
+                  app.controller('SideBarCtrl', function($scope, $mdSidenav) {
+                    $scope.person = {'facebook_link':'https://www.facebook.com/deepak.kumar.376', 'emailId':'dk66186@gmail.com', 'imagePath':'img/icons/profile_pic.jpg', 'pdf_link':'pdf/cv_deepak_kumar_btech_2015.pdf', 'word_link':'word/cv_deepak_kumar_btech_2015.docx', 'github_link':'https://github.com/deepak1745', 'linkedIn':'https://in.linkedin.com/in/deepak-kumar-9735396b'};
+                    document.title = 'Angular Resume';
+                    $scope.skills = [{'name':'Core Java', 'rating':'9', 'color':'rgb(244, 67, 54)'}, {'name':'JavaScript', 'rating':'8', 'color':'rgb(9, 210, 97)'}, {'name':'Node.js', 'rating':'7+', 'color':'rgb(255, 51, 153)'}, {'name':'Angular JS', 'rating':'8', 'color':'#039BE5'}, {'name':'Express.js', 'rating':null, 'color':null}, {'name':'jQuery', 'rating':'8', 'color':'rgb(255, 111, 0)'}, {'name':'Servlets', 'rating':null, 'color':null}, {'name':'Spring MVC', 'rating':'7+', 'color':'rgb(178, 102, 255)'}, {'name':'Hibernate', 'rating':'7', 'color':'rgb(0, 204, 204)'}, {'name':'Jdbc', 'rating':null, 'color':null}, {'name':'JSP', 'rating':null, 'color':null}];
+                    $scope.technologies = [{'name':'Angular Material', 'rating':'7', 'color':'rgb(255, 51, 153)'}, {'name':'Pdf Extraction', 'rating':'8', 'color':'rgb(0, 204, 204)'}, {'name':'HTML', 'rating':null, 'color':null}, {'name':'HTML5', 'rating':null, 'color':null}, {'name':'CSS', 'rating':'8', 'color':'rgb(255, 102, 255)'}, {'name':'CSS3', 'rating':null, 'color':null}, {'name':'D3.js', 'rating':null, 'color':null}, {'name':'Bootstrap', 'rating':8, 'color':'rgb(255, 111, 0)'}, {'name':'Web Scraping', 'rating':null, 'color':null}, {'name':'NLP', 'rating':'6+', 'color':'rgb(255, 102, 102)'}, {'name':'Passport.js', 'rating':null, 'color':null}, {'name':'JUnit', 'rating':null, 'color':null}, {'name':'Socket.io', 'rating':'7', 'color':'#039BE5'}];
+                    $scope.databases = [{'name':'SQL', 'rating':null, 'color':'#08EA6F'}, {'name':'MongoDB', 'rating':'7', 'color':null}, {'name':'PL/SQL', 'rating':null, 'color':null}, {'name':'OrientDB', 'rating':null, 'color':'#08EA6F'}];
+                    $scope.areasOfInterest = [{'name':'Data Structures', 'rating':'8', 'color':'#8A2A5A'}, {'name':'Algorithms', 'rating':null, 'color':null}];
+                    $scope.showMobileMainHeader = true;
+
+                    $scope.openSideNavPanel = function() {
+                      $mdSidenav('left').open();
+                      var card = $('.cards');
+                      var width = screen.width;
+                      //  console.log(width);
+                      if(width>=1200){
+                        card.css('margin-left','22%');
+                        card.css('width','78%');
+                        var sidebar = $('.md-sidenav-left');
+                        $('.cards').click(function(e) {
+                          e.preventDefault();
+                          card.css('margin','auto');
+                          card.css('width','70%');
+                        });
+                      }
+                    };
+
+                    $scope.closeSideNavPanel = function() {
+                      $mdSidenav('left').close();
+                      var width = screen.width;
+                      var card = $('.cards');
+                      if(width<1200){
+                        card.css('margin','auto');
+                        card.css('width','100%');
+                      }
+                      else{
+                        card.css('margin','auto');
+                        card.css('width','70%');
+                      }
+                    };
+
+
+                  });
+
+                  function AppCtrl ($scope) {
+                    var self = this;
+                    self.readonly = true;
+                    self.skills = ['Core Java', 'JavaScript', 'Node.js', 'Angular JS', 'Express.js', 'jQuery', 'Servlets', 'Spring MVC', 'Hibernate', 'Jdbc', 'JSP'];
+                    self.familiarTechnologies = ['Angular Material Design', 'Pdf Extraction', 'HTML', 'HTML5', 'CSS', 'CSS3', 'D3.js', 'Bootstrap', 'Natural Language Processing', 'Web Scraping', 'Passport.js', 'JUnit', 'Socket.io', 'Meteor.js'];
+                    self.databases = ['SQL', 'MongoDB', 'PL/SQL', 'OrientDB', 'Arrango DB'];
+                    self.areasOfInterest = ['Data Structures', 'Algorithms'];
+                    $scope.contactInfo = {'linkedIn':'https://in.linkedin.com/in/deepak-kumar-9735396b', 'phone':'7022409865, 8052211414','emailInfo':['dk66186@gmail.com', 'deepu1745@gmail.com'], 'github_link':'https://github.com/deepak1745', 'skype':'deepu1745'};
+                    $scope.personalInfo = {'father':'Shambhu Prasad', 'mother':'Usha Kumari', 'nationality':'Indian', 'date_of_birth':'23/02/1993', 'languages':'English, Hindi', 'hobbies':'Music, Cricket'}
+                    $scope.person = {'name':'Deepak Kumar', 'objective':'Project Engineer with two year of experience in Wipro. Versatile, bilingual professional with MEAN Stack and J2EE projects ranging in size from open source projects to full scale multi-million dollar high profile corporate construction projects. Ability to provide efficient solutions to real life problems, develop restful web services for operational and business intelligence and Java API’s for business automation.', 'objective2': 'I am looking for exciting mean stack and java related research and/or development opportunities. If you are ready to collaborate, feel free to contact me.', 'mail':'dk66186@gmail.com'};
+                    $scope.college =  {'name':'Indian Institute of Technology (BHU), Varanasi', 'duration':'2011-2015', 'degree':'B.Tech', 'branch':'Electrical Engineering', 'grade':'8.09'};
+                    $scope.seniorSchool = {'name':'DAV Public School, Patna', 'year':'2010', 'marks':'84.20%'};
+                    $scope.school = {'name':'GYAN NIKETAN School, Patna', 'year':'2008', 'marks':'95.16%'};
+                    $scope.semesters = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII'];
+                    $scope.semester_grades = ['7.44', '8.12', '7.80', '8.35', '8.31', '8.15', '8.08', '8.48'];
+                    $scope.year_grades = ['7.78', '8.08', '8.23', '8.28'];
+                    $scope.company = {'name':'Wipro Technologies Ltd.', 'duration':'07/2015 - Present', 'designation':'Project Engineer', 'experience': '2 years'};
+                  }
+                })();
+                </script>
+              </body>
+              </html>
+
+              <!--
+              Copyright 2016 Google Inc. All Rights Reserved.
+              Use of this source code is governed by an MIT-style license that can be in foundin the LICENSE file at http://material.angularjs.org/license.
+            -->
