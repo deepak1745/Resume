@@ -10,6 +10,7 @@
 // limitations under the License.
 // This code is written by Deepak Kumar -->
 
+var cool = require('cool-ascii-faces');
 var express = require('express');
 var app = express();
 var http = require('http').Server(app);
@@ -20,6 +21,10 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'angular_resume.html'));
 });
 
-http.listen(process.env.PORT, function () {
+app.get('/cool', function(request, response) {
+  response.send(cool());
+});
+
+http.listen(8000, function () {
   console.log('resume running!');
 });
